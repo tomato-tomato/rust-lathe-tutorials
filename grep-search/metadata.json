@@ -1,0 +1,30 @@
+{
+  "_warning": "⚠️ 本文件是该教程的索引文件，请勿删除。误删后 lathe 将无法识别此教程；可运行 /lathe 列表 触发自愈重建。",
+  "slug": "grep-search",
+  "title": "用 Rust 构建类 grep 的命令行搜索工具",
+  "topic": "使用 Rust 实现一个类 grep 的命令行搜索工具",
+  "goal": "掌握用 Rust 从零构建命令行搜索工具的核心闭环——参数解析、逐行读取、字符串匹配、错误处理与退出码，并用测试守护行为",
+  "created": "2026-09-06T18:06:56Z",
+  "status": "unverified",
+  "tags": ["rust", "cli", "text-search"],
+  "parts": ["part-01.md"],
+  "language": "zh-CN",
+  "repo": "",
+  "repo_branch": "",
+  "local_project_path": "",
+  "tools": [
+    {"name": "rustc", "version": "1.98"},
+    {"name": "cargo", "version": "1.98"}
+  ],
+  "sources": [
+    "https://www.gnu.org/software/grep/manual/html_node/Exit-Status.html",
+    "https://en.wikipedia.org/wiki/Grep",
+    "https://doc.rust-lang.org/cargo/commands/cargo-new.html",
+    "https://doc.rust-lang.org/std/env/fn.args.html",
+    "https://doc.rust-lang.org/std/fs/fn.read_to_string.html",
+    "https://doc.rust-lang.org/std/process/struct.ExitCode.html",
+    "https://doc.rust-lang.org/std/primitive.str.html"
+  ],
+  "voice": "craftsman",
+  "model": "QoderWork"
+}
