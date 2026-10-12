@@ -1,5 +1,6 @@
 {
-  "_warning": "⚠️ 本文件是该教程的索引文件，请勿删除。误删后 lathe 将无法识别此教程；可运行 /lathe 列表 触发自愈重建。",
+  "_warning": "⚠️ 本文件是该教程的索引文件，请勿删除。误删后 lathe 将无法识别此教程；可运行 /lathe 标签 <slug> 或任一写入型操作触发自愈重建。",
+  "lathe_version": "0.5.2",
   "slug": "grep-search",
   "title": "用 Rust 构建类 grep 的命令行搜索工具",
   "topic": "使用 Rust 实现一个类 grep 的命令行搜索工具",
@@ -7,24 +8,53 @@
   "created": "2026-09-06T18:06:56Z",
   "status": "unverified",
   "tags": ["rust", "cli", "text-search"],
-  "parts": ["part-01.md"],
+  "parts": ["part-01.md", "part-02.md"],
   "language": "zh-CN",
+  "experience_level": "beginner",
+  "style_anchor": "julia-evans",
   "repo": "",
   "repo_branch": "",
-  "local_project_path": "",
+  "local_project_path": "/Users/yanlingfeng/Code/my-rust-lathe-courses/code",
   "tools": [
     {"name": "rustc", "version": "1.98"},
     {"name": "cargo", "version": "1.98"}
   ],
   "sources": [
     "https://www.gnu.org/software/grep/manual/html_node/Exit-Status.html",
+    "https://www.gnu.org/software/grep/manual/html_node/Matching-Control.html",
     "https://en.wikipedia.org/wiki/Grep",
     "https://doc.rust-lang.org/cargo/commands/cargo-new.html",
     "https://doc.rust-lang.org/std/env/fn.args.html",
     "https://doc.rust-lang.org/std/fs/fn.read_to_string.html",
     "https://doc.rust-lang.org/std/process/struct.ExitCode.html",
-    "https://doc.rust-lang.org/std/primitive.str.html"
+    "https://doc.rust-lang.org/std/primitive.str.html",
+    "https://doc.rust-lang.org/error_codes/E0716.html",
+    "https://doc.rust-lang.org/reference/destructors.html#extending-based-on-expressions",
+    "https://docs.rs/clap/latest/clap/_derive/index.html"
   ],
   "voice": "craftsman",
-  "model": "QoderWork"
+  "model": "QoderWork",
+  "continuity": {
+    "controlling_example": "grep-search：纯标准库 Rust 搜索工具（crate 在 code/grep-search），样本 fruits.txt",
+    "fixed_numbers": {
+      "退出码": "0=有选中行 / 1=无选中行 / 2=出错",
+      "fruits.txt": "5 行、38 字节",
+      "工具链": "Rust 1.98、edition 2024、零依赖"
+    },
+    "metaphor": "打一把趁手的工具（刀）",
+    "metaphor_retired": true,
+    "covered_concepts": [
+      "args 下标 0 陷阱、ExitCode 三态退出码与 Result/ErrorKind 错误处理",
+      "lines+contains 字面匹配、纯函数与 cargo test 测试维护",
+      "借用迭代、Options + parse_args 选项解析",
+      "selected lines 与 -v 反选；筛选与格式化分离"
+    ],
+    "next_hook": "正则、目录递归、stdin、大文件流式读取、-n/-c/--help",
+    "part_titles": {
+      "part-01.md": "用 Rust 造一个自己的 grep：参数、文件、匹配行",
+      "part-02.md": "给 grep-search 装上一个开关：反选、选项解析与一次诚实的重构"
+    },
+    "updated_at": "2026-09-14T05:20:16Z",
+    "updated_through": "part-02.md"
+  }
 }
